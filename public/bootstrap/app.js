@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     storageBucket: "todolistproject-f1fa1.appspot.com",
     messagingSenderId: "226876251544",
     appId: "1:226876251544:web:42313083b54e756308dfed",
+    /* The configuration from Firebase console. */
   };
 
   const firebaseApp = firebase.initializeApp(config);

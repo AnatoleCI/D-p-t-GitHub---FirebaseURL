@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   /* firebase initialization */
   const config = {
+    apiKey: "AIzaSyAXY5BZov65lRkWhuST_73DN7edHGLIjkU",
+    authDomain: "todolistproject-f1fa1.firebaseapp.com",
+    projectId: "todolistproject-f1fa1",
+    storageBucket: "todolistproject-f1fa1.appspot.com",
+    messagingSenderId: "226876251544",
+    appId: "1:226876251544:web:42313083b54e756308dfed",
     /* The configuration from Firebase console. */
   };
 
@@ -114,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
         c_sign_in.style.display = "none";
 
         u_email.innerText = user.email;
-        c_logout.style.display = "block";
+        u_logout.style.display = "block";
         c_todo.style.display = "block";
 
         l_email.value = "";
@@ -136,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
         c_sign_in.style.display = "block";
 
         u_email.innerText = "";
-        c_logout.style.display = "none";
+        u_logout.style.display = "none";
         c_todo.style.display = "none";
       })
       .catch((error) => {
@@ -155,6 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .then(() => {
         msg.innerText = "The new task has been successfully added.";
+        t_title.value = "";
         getTasks();
       })
       .catch((error) => {
