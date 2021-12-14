@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>To Do List with Firebase</title>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+      integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./app.js"></script>
+  </head>
+
+  <style>
+    .complete {
+      text-decoration: line-through;
+    }
+  </style>
+
+  <body>
+    <div id="u_logout" style="display: none">
+      <button id="b_logout">Logout</button><span> <b id="u_email"></b></span>
+      <hr />
+    </div>
+    <div id="login">
+      <form id="f_login">
+        <label for="l_email">E-mail : </label>
+        <input type="email" id="l_email" />
+        <label for="l_password">Password : </label>
+        <input type="password" id="l_password" />
+        <input type="submit" value="Login" />
+      </form>
+      <hr />
+    </div>
+    <div id="sign_in">
+      <form id="f_sign_in">
+        <label for="s_email">E-mail : </label>
+        <input type="email" id="s_email" required />
+        <label for="s_password">Password : </label>
+        <input type="password" id="s_password" required />
+        <input type="submit" value="Register" />
+      </form>
+      <hr />
+    </div>
+    <div id="todo" style="display: none">
+      <form id="f_todo">
+        <input type="text" id="t_title" required />
+        <input type="submit" value="Add" />
+      </form>
+      <ul id="d_todo"></ul>
+      <hr />
+    </div>
+    <b>Message : </b> <span id="msg"></span>
+  </body>
+</html>
