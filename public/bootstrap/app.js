@@ -1,12 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   /* firebase initialization */
   const config = {
-    apiKey: "AIzaSyAXY5BZov65lRkWhuST_73DN7edHGLIjkU",
-    authDomain: "todolistproject-f1fa1.firebaseapp.com",
-    projectId: "todolistproject-f1fa1",
-    storageBucket: "todolistproject-f1fa1.appspot.com",
-    messagingSenderId: "226876251544",
-    appId: "1:226876251544:web:42313083b54e756308dfed",
     /* The configuration from Firebase console. */
   };
 
